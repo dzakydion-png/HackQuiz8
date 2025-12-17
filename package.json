@@ -1,0 +1,27 @@
+{
+  "name": "hackquiz8",
+  "version": "1.0.0",
+  "description": "HackQuiz8 adalah platform kuis online interaktif yang dirancang untuk mengasah logika, pemahaman teknologi, dan kemampuan problem solving dengan pendekatan ala bootcamp Hacktiv8.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dzakydion-png/HackQuiz8.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dzakydion-png/HackQuiz8/issues"
+  },
+  "homepage": "https://github.com/dzakydion-png/HackQuiz8#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.2.1",
+    "pg": "^8.16.3",
+    "sequelize": "^6.37.7",
+    "sequelize-cli": "^6.6.3"
+  }
+}

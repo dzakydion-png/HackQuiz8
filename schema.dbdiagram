@@ -1,0 +1,123 @@
+{
+  "version": "1.0.0",
+  "darkMode": true,
+  "gridEnabling": false,
+  "detailLevel": "All",
+  "tablePositions": [
+    {
+      "name": "Users",
+      "schemaName": "public",
+      "x": -2.7859625904016525,
+      "y": 319.005289577443
+    },
+    {
+      "name": "Profiles",
+      "schemaName": "public",
+      "x": 253.9489678459836,
+      "y": 13.175467619979454
+    },
+    {
+      "name": "UserCategories",
+      "schemaName": "public",
+      "x": 396.6622010325092,
+      "y": 554.0375031253435
+    },
+    {
+      "name": "Categories",
+      "schemaName": "public",
+      "x": -2.7859625904016525,
+      "y": 575.6128916588094
+    },
+    {
+      "name": "Courses",
+      "schemaName": "public",
+      "x": 494.37656384337834,
+      "y": 238.44856605023733
+    },
+    {
+      "name": "Exercises",
+      "schemaName": "public",
+      "x": 717.1262288692494,
+      "y": 302.44856605023733
+    }
+  ],
+  "tableGroupCollapseStates": [],
+  "stickyNoteLayouts": [],
+  "referencePaths": [
+    {
+      "firstFieldNames": [
+        "id"
+      ],
+      "firstTableName": "Users",
+      "firstSchemaName": "public",
+      "firstRelation": "1",
+      "secondFieldNames": [
+        "UserId"
+      ],
+      "secondTableName": "Profiles",
+      "secondSchemaName": "public",
+      "secondRelation": "1",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "UserId"
+      ],
+      "firstTableName": "UserCategories",
+      "firstSchemaName": "public",
+      "firstRelation": "*",
+      "secondFieldNames": [
+        "id"
+      ],
+      "secondTableName": "Users",
+      "secondSchemaName": "public",
+      "secondRelation": "1",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "CategoryId"
+      ],
+      "firstTableName": "UserCategories",
+      "firstSchemaName": "public",
+      "firstRelation": "*",
+      "secondFieldNames": [
+        "id"
+      ],
+      "secondTableName": "Categories",
+      "secondSchemaName": "public",
+      "secondRelation": "1",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "UserId"
+      ],
+      "firstTableName": "Courses",
+      "firstSchemaName": "public",
+      "firstRelation": "*",
+      "secondFieldNames": [
+        "id"
+      ],
+      "secondTableName": "Users",
+      "secondSchemaName": "public",
+      "secondRelation": "1",
+      "checkPoints": []
+    },
+    {
+      "firstFieldNames": [
+        "CourseId"
+      ],
+      "firstTableName": "Exercises",
+      "firstSchemaName": "public",
+      "firstRelation": "*",
+      "secondFieldNames": [
+        "id"
+      ],
+      "secondTableName": "Courses",
+      "secondSchemaName": "public",
+      "secondRelation": "1",
+      "checkPoints": []
+    }
+  ]
+}
