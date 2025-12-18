@@ -1,0 +1,58 @@
+Table Users {
+    id int [primary key]
+    email varchar
+    password varchar
+    role varchar
+    createdAt date
+    updatedAt date
+}
+
+Table Profiles {
+    id int [primary key]
+    fullName varchar
+    alamat varchar
+    lastEducation varchar
+    createdAt date
+    updatedAt date
+    UserId int [ref: - Users.id]
+}
+
+Table UserCategories {
+    id int [primary key]
+    CategoryId int
+    UserId int
+    createdAt date
+    updatedAt date
+}
+
+Table Categories {
+    id int [primary key]
+    name varchar
+    createdAt date
+    updatedAt date
+}
+
+Table Courses {
+    id int [primary key]
+    name varchar
+    description text
+    duration int
+    CategoryId int
+    UserId int
+    createdAt date
+    updatedAt date
+}
+
+Table Exercises {
+    id int [primary key]
+    question text
+    answerKey varchar
+    CourseId int
+    createdAt date
+    updatedAt date
+}
+
+ref Users_UserCategories: UserCategories.UserId > Users.id
+ref Categories_UserCategories: UserCategories.CategoryId > Categories.id
+ref Users_Courses: Courses.UserId > Users.id
+ref Courses_Execises: Exercises.CourseId > Courses.id
