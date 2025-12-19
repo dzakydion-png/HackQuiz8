@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil Saya</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body class="bg-light">
+  <%- include('partials/_navbar') %>
+
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        
+        <div class="card border-0 shadow-lg overflow-hidden">
+          <div class="card-header bg-primary text-white text-center py-4 position-relative">
+            <div class="bg-white rounded-circle d-inline-flex align-items-center justify-content-center mb-2" style="width: 80px; height: 80px;">
+              <i class="bi bi-person-fill display-4 text-primary"></i>
+            </div>
+            <h4 class="mb-0 fw-bold"><%= profile ? profile.fullName : 'User Baru' %></h4>
+            <p class="mb-0 opacity-75 small"><i class="bi bi-envelope me-1"></i><%= user.email %></p>
+            <span class="badge bg-warning text-dark mt-2 text-uppercase"><%= user.role %></span>
+          </div>
+
+          <div class="card-body p-4">
+            <% if (profile) { %>
+              <h6 class="text-uppercase text-muted small fw-bold mb-3">Biodata Diri</h6>
+              <ul class="list-group list-group-flush mb-4 rounded">
+                <li class="list-group-item d-flex align-items-center py-3">
+                  <i class="bi bi-geo-alt text-primary me-3 fs-5"></i>
+                  <div>
+                    <span class="d-block text-muted small">Alamat</span>
+                    <span class="fw-medium"><%= profile.alamat || '-' %></span>
+                  </div>
+                </li>
+                <li class="list-group-item d-flex align-items-center py-3">
+                  <i class="bi bi-mortarboard text-primary me-3 fs-5"></i>
+                  <div>
+                    <span class="d-block text-muted small">Pendidikan Terakhir</span>
+                    <span class="fw-medium"><%= profile.lastEducation || '-' %></span>
+                  </div>
+                </li>
+              </ul>
+            <% } else { %>
+              <div class="text-center py-4 bg-light rounded mb-4">
+                <i class="bi bi-person-exclamation display-4 text-muted"></i>
+                <p class="text-muted mt-2">Profil belum dilengkapi. Yuk isi dulu!</p>
+              </div>
+            <% } %>
+
+            <div class="mb-4">
+              <h6 class="text-uppercase text-muted small fw-bold mb-3">Minat Belajar</h6>
+              <% if (user.Categories && user.Categories.length > 0) { %>
+                <div class="d-flex flex-wrap gap-2">
+                  <% user.Categories.forEach(cat => { %>
+                    <span class="badge rounded-pill bg-info text-dark border border-info px-3 py-2">
+                      <i class="bi bi-tag-fill me-1"></i> <%= cat.name %>
+                    </span>
+                  <% }) %>
+                </div>
+              <% } else { %>
+                <div class="alert alert-light border text-center text-muted small">
+                  Belum memilih kategori minat.
+                </div>
+              <% } %>
+            </div>
+
+            <div class="d-grid gap-2">
+              <a href="/<%= user.role %>/<%= userId %>/profile/edit" class="btn btn-outline-primary rounded-pill fw-bold">
+                <i class="bi bi-pencil me-2"></i> Edit Profil
+              </a>
+              <a href="/<%= user.role %>/<%= userId %>" class="btn btn-link text-decoration-none text-muted">
+                Kembali ke Dashboard
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

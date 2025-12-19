@@ -1,0 +1,7 @@
+[
+  { "email": "user1@mail.com", "password": "secret1", "role": "student" },
+  { "email": "mentorA@mail.com", "password": "secret2", "role": "teacher" },
+  { "email": "user2@mail.com", "password": "secret3", "role": "student" },
+  { "email": "mentorB@mail.com", "password": "secret4", "role": "teacher" },
+  { "email": "user3@mail.com", "password": "secret5", "role": "student" }
+]

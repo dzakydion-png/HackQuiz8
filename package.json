@@ -18,8 +18,11 @@
   },
   "homepage": "https://github.com/dzakydion-png/HackQuiz8#readme",
   "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "chart.js": "^4.5.1",
     "ejs": "^3.1.10",
     "express": "^5.2.1",
+    "express-session": "^1.18.2",
     "pg": "^8.16.3",
     "sequelize": "^6.37.7",
     "sequelize-cli": "^6.6.3"

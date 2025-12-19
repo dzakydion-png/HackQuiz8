@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Belajar JavaScript Dasar",
+    "description": "Mengenal variabel, function, looping, dan dasar-dasar logika.",
+    "duration": 90,
+    "categoryId": 1,
+    "userId": 2
+  },
+  {
+    "id": 2,
+    "name": "Fundamental Desain UI",
+    "description": "Mempelajari prinsip layout, warna, tipografi, dan komposisi.",
+    "duration": 70,
+    "categoryId": 2,
+    "userId": 4
+  },
+  {
+    "id": 3,
+    "name": "Pengantar Machine Learning",
+    "description": "Dasar supervised learning, regresi, dan algoritma umum.",
+    "duration": 120,
+    "categoryId": 3,
+    "userId": 2
+  },
+  {
+    "id": 4,
+    "name": "Teknik Berbicara Efektif",
+    "description": "Cara menyampaikan presentasi dengan jelas, percaya diri, dan terstruktur.",
+    "duration": 80,
+    "categoryId": 4,
+    "userId": 4
+  },
+  {
+    "id": 5,
+    "name": "Mengenal Tata Surya",
+    "description": "Dasar astronomi seperti planet, bintang, orbit, dan galaksi.",
+    "duration": 60,
+    "categoryId": 5,
+    "userId": 2
+  }
+]
