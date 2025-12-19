@@ -1,0 +1,7 @@
+[
+  { "question": "Apa output dari `console.log(typeof null)`?", "answerKey": "object", "courseId": 1 },
+  { "question": "Komponen utama dalam UI design adalah?", "answerKey": "Typography", "courseId": 2 },
+  { "question": "Algoritma ML yang digunakan untuk klasifikasi?", "answerKey": "Decision Tree", "courseId": 3 },
+  { "question": "Hal terpenting dalam public speaking?", "answerKey": "Kepercayaan diri", "courseId": 4 },
+  { "question": "Planet terbesar di tata surya?", "answerKey": "Jupiter", "courseId": 5 }
+]

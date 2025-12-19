@@ -1,0 +1,90 @@
+/* Import Font Keren: Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #4e73df;
+  --secondary-color: #858796;
+  --success-color: #1cc88a;
+  --background-color: #f3f4f6;
+  --card-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: #5a5c69;
+}
+
+/* --- NAVBAR GLASSMORPHISM --- */
+.navbar {
+  background: rgba(78, 115, 223, 0.95) !important; /* Semi transparan */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+}
+
+/* --- CARD MODERN --- */
+.card {
+  border: none;
+  border-radius: 15px; /* Sudut lebih bulat */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Efek melayang saat di-hover */
+  box-shadow: var(--card-shadow);
+}
+
+.card-header {
+  background-color: #fff;
+  border-bottom: 1px solid #e3e6f0;
+  font-weight: 600;
+  padding: 1.2rem;
+}
+
+/* --- BUTTONS --- */
+.btn {
+  border-radius: 50px; /* Tombol bulat lonjong */
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 10px rgba(78, 115, 223, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: #2e59d9;
+  transform: scale(1.02);
+}
+
+/* --- BADGES --- */
+.badge {
+  padding: 0.5em 0.8em;
+  font-weight: 500;
+}
+
+/* --- LOGIN / REGISTER PAGE --- */
+.auth-container {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 450px;
+  padding: 2rem;
+}
